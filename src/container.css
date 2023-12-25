@@ -1,0 +1,33 @@
+.infoContainer {
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 1rem;
+}
+form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+input,
+textarea {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+textarea {
+  resize: none;
+}
+input input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
