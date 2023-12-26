@@ -1,17 +1,8 @@
 import { useState } from "react";
 import "../styles/container.css";
 
-export default function PersonalData() {
+export default function PersonalData(props) {
   const [showForm, setShowForm] = useState(false);
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [city, setCity] = useState("");
-  const [phone, setPhone] = useState("");
-
-  const handleNameChange = (e) => setFullName(e.target.value);
-  const handleEmailChange = (e) => setEmail(e.target.value);
-  const handleCityChange = (e) => setCity(e.target.value);
-  const handlePhoneChange = (e) => setPhone(e.target.value);
 
   const toggleForm = () => {
     setShowForm(!showForm);
@@ -24,19 +15,31 @@ export default function PersonalData() {
         <form>
           <label>
             Full Name:
-            <input type="text" value={fullName} onChange={handleNameChange} />
+            <input
+              type="text"
+              value={props.fullName}
+              onChange={props.handleName}
+            />
           </label>
           <label>
             Email:
-            <input type="email" value={email} onChange={handleEmailChange} />
+            <input
+              type="email"
+              value={props.email}
+              onChange={props.handleEmail}
+            />
           </label>
           <label>
             City:
-            <input type="text" value={city} onChange={handleCityChange} />
+            <input type="text" value={props.city} onChange={props.handleCity} />
           </label>
           <label>
             Phone Number:
-            <input type="tel" value={phone} onChange={handlePhoneChange} />
+            <input
+              type="tel"
+              value={props.phone}
+              onChange={props.handlePhone}
+            />
           </label>
         </form>
       )}
