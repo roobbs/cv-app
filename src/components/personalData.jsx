@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./container.css";
+import "../styles/container.css";
 
 export default function PersonalData() {
   const [showForm, setShowForm] = useState(false);

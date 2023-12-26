@@ -1,0 +1,12 @@
+.content {
+  display: flex;
+  gap: 1rem;
+}
+.insert {
+  flex: 1;
+}
+.cv {
+  background-color: white;
+  border-radius: 8px;
+  flex: 2;
+}
