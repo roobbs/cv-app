@@ -20,8 +20,9 @@
   font-family: arial;
 }
 .header {
-  background-color: rgb(168, 168, 255);
+  background-color: rgb(5, 0, 44);
   padding: 1rem 2rem;
+  color: white;
 }
 .name {
   font-size: 2rem;
@@ -34,5 +35,9 @@
 .info div {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 1rem;
+}
+.info img {
+  filter: invert(100);
 }

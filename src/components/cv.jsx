@@ -13,16 +13,33 @@ export default function Cv(props) {
             {props.email || "Email"}
           </div>
           <div>
-            <img src={mapSvg} alt=" " height={30} />
-            {props.city || "City"}
-          </div>
-          <div>
             {" "}
             <img src={phoneSvg} alt=" " height={30} />
             {props.phone || "Phone"}
           </div>
+          <div>
+            <img src={mapSvg} alt=" " height={30} />
+            {props.city || "City"}
+          </div>
         </div>
       </div>
+      <div className="education">
+        <div className="educationTitle">
+          {props.educations.length > 0 && "Education Experience"}
+        </div>
+        <div className="educations">
+          {props.educations.map((education, index) => (
+            <div key={index} className="educationSquareCv">
+              <h3>{education.degree}</h3>
+              <p>{education.school}</p>
+              <p>Country: {education.country}</p>
+              <p>Start Date: {education.startDate}</p>
+              <p>End Date: {education.endDate}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* <div className="experience">Job Experience</div> */}
     </>
   );
 }

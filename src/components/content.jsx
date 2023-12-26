@@ -14,6 +14,10 @@ export default function Content() {
   const handleCityChange = (e) => setCity(e.target.value);
   const [phone, setPhone] = useState("");
   const handlePhoneChange = (e) => setPhone(e.target.value);
+  {
+    /*          */
+  }
+  const [educations, setEducations] = useState([]);
 
   return (
     <>
@@ -29,11 +33,17 @@ export default function Content() {
             phone={phone}
             handlePhone={handlePhoneChange}
           />
-          <Education />
+          <Education educations={educations} setEducations={setEducations} />
           <Experience />
         </div>
         <main className="cv">
-          <Cv fullName={fullName} email={email} city={city} phone={phone} />
+          <Cv
+            fullName={fullName}
+            email={email}
+            city={city}
+            phone={phone}
+            educations={educations}
+          />
         </main>
       </div>
     </>
