@@ -30,11 +30,16 @@ export default function Cv(props) {
         <div className="educations">
           {props.educations.map((education, index) => (
             <div key={index} className="educationSquareCv">
-              <h3>{education.degree}</h3>
-              <p>{education.school}</p>
-              <p>Country: {education.country}</p>
-              <p>Start Date: {education.startDate}</p>
-              <p>End Date: {education.endDate}</p>
+              <div className="dates">
+                <div>
+                  {education.startDate} - {education.endDate}
+                </div>
+                <div>{education.country}</div>
+              </div>
+              <div className="school">
+                <h3>{education.degree}</h3>
+                <div>{education.school}</div>
+              </div>
             </div>
           ))}
         </div>
