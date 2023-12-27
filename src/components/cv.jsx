@@ -44,7 +44,27 @@ export default function Cv(props) {
           ))}
         </div>
       </div>
-      {/* <div className="experience">Job Experience</div> */}
+      <div className="experience">
+        <div className="experienceTitle">
+          {props.experiences.length > 0 && "Job Experience"}
+        </div>
+        <div className="experiences">
+          {props.experiences.map((exp, index) => (
+            <div key={index} className="experienceSquare">
+              <div className="jobInfo">
+                <div className="jobDate">
+                  {exp.startDate} - {exp.endDate}
+                </div>
+                <div className="jobTitle">
+                  <h3>{exp.jobTitle}</h3>
+                  <div>{exp.company}</div>
+                </div>
+              </div>
+              <div className="desc">{exp.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

@@ -3,7 +3,6 @@ import "../styles/container.css";
 
 export default function Education({ educations, setEducations }) {
   const [showForm, setShowForm] = useState(false);
-  // const [educations, setEducations] = useState([]);
   const [newEducation, setNewEducation] = useState({
     degree: "",
     school: "",
@@ -34,24 +33,25 @@ export default function Education({ educations, setEducations }) {
     });
   };
 
-  const toggleForm = () => {
-    setShowForm(!showForm);
-  };
-
   const removeEducation = (index) => {
     const updatedEducations = [...educations];
     updatedEducations.splice(index, 1);
     setEducations(updatedEducations);
   };
 
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
+
   return (
     <div className="infoContainer">
       {educations.map((education, index) => (
-        <div key={index} className="educationSquare">
+        <div key={index} className="square">
           <h3>{education.degree}</h3>
           <button onClick={() => removeEducation(index)}>Remove</button>
         </div>
       ))}
+
       <div>
         <h2 onClick={toggleForm}> Add New Education {showForm ? "▼" : "▶"}</h2>
         {showForm && (

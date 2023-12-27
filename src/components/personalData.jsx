@@ -30,16 +30,16 @@ export default function PersonalData(props) {
             />
           </label>
           <label>
-            City:
-            <input type="text" value={props.city} onChange={props.handleCity} />
-          </label>
-          <label>
             Phone Number:
             <input
               type="tel"
               value={props.phone}
               onChange={props.handlePhone}
             />
+          </label>
+          <label>
+            City:
+            <input type="text" value={props.city} onChange={props.handleCity} />
           </label>
         </form>
       )}

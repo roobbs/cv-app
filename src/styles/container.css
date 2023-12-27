@@ -32,7 +32,7 @@ input input {
   margin-bottom: 16px;
   box-sizing: border-box;
 }
-.educationSquare {
+.square {
   border: 1px solid rgb(113, 0, 133);
   border-radius: 10px;
 }

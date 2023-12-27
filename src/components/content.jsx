@@ -18,7 +18,10 @@ export default function Content() {
     /*          */
   }
   const [educations, setEducations] = useState([]);
-
+  {
+    /*          */
+  }
+  const [experiences, setExperiences] = useState([]);
   return (
     <>
       <div className="content">
@@ -34,7 +37,10 @@ export default function Content() {
             handlePhone={handlePhoneChange}
           />
           <Education educations={educations} setEducations={setEducations} />
-          <Experience />
+          <Experience
+            experiences={experiences}
+            setExperiences={setExperiences}
+          />
         </div>
         <main className="cv">
           <Cv
@@ -43,6 +49,7 @@ export default function Content() {
             city={city}
             phone={phone}
             educations={educations}
+            experiences={experiences}
           />
         </main>
       </div>
